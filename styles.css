@@ -1,0 +1,129 @@
+/* Estilos globales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+/* Contenedor del menú */
+#menu {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#menu h2 {
+    margin-bottom: 20px;
+}
+
+#menu select, #menu button {
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#menu button {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#menu button:hover {
+    background-color: #2980b9;
+}
+
+/* Imagen de la figura seleccionada */
+#figuraImg {
+    display: none; 
+    width: 300px; 
+    height: 300px; 
+    object-fit: contain; 
+    margin: 20px auto; 
+    display: block; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Formulario de las figuras */
+.formulario {
+    display: none;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    max-width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.formulario h2 {
+    color: #3498db;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-size: 1em;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Resultados */
+p {
+    text-align: center;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
