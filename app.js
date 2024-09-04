@@ -173,19 +173,3 @@ document.getElementById('btnCalcularTriangulo').addEventListener('click', functi
     document.getElementById('resultadoTriangulo').innerHTML = resultado;
 });
 
-// Función para validar que solo se ingresen números y el punto decimal
-function validarEntradaNumerica(event) {
-    const valor = event.target.value;
-    // Expresión regular para permitir solo números y un punto decimal
-    const regex = /^[0-9]*\.?[0-9]*$/;
-
-    if (!regex.test(valor)) {
-        alert("Solo se deben ingresar valores numéricos");
-        event.target.value = "";  // Limpiar el campo de entrada si el valor es inválido
-    }
-}
-
-// Aplicar la función de validación a los campos de entrada en cada formulario
-document.querySelectorAll('input[type="number"]').forEach(input => {
-    input.addEventListener('input', validarEntradaNumerica);
-});
