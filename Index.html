@@ -4,63 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Figuras Geométricas</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="objetos/rectangulo.js" defer></script>
+    <script src="objetos/cuadrado.js" defer></script>
+    <script src="objetos/circulo.js" defer></script>
+    <script src="Objetos/triangulo-equilatero.js" defer></script>
+    <script src="Objetos/triangulo-escaleno.js" defer></script>
+    <script src="Objetos/triangulo-isosceles.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Calculadora de Figuras Geométricas</h1>
+    <div id="app">
+        <h1>Calculadora de Figuras Geométricas</h1>
+        
+        <div class="menu">
+            <label for="figura-select">Selecciona una figura:</label>
+            <select id="figura-select" onchange="mostrarFormulario()">
+                <option value="">Seleccione</option>
+                <option value="rectangulo">Rectángulo</option>
+                <option value="cuadrado">Cuadrado</option>
+                <option value="circulo">Círculo</option>
+                <option value="triangulo">Triángulo</option>
+            </select>
+        </div>
 
-    <div id="menu">
-        <h2>Selecciona una Figura</h2>
-        <select id="figura">
-            <option value="rectangulo">Rectángulo</option>
-            <option value="cuadrado">Cuadrado</option>
-            <option value="circulo">Círculo</option>
-            <option value="triangulo">Triángulo</option>
-        </select>
-        <button id="btnSeleccionar">Seleccionar</button>
+        <div id="formulario-contenedor">
+            <!-- Formulario dinámico se cargará aquí -->
+        </div>
+
+        <div id="imagen-contenedor" class="text-center mt-4">
+            <img id="imagen-figura" src="" alt="Figura" style="display: none; width: 200px; height: 200px;">
+        </div>
     </div>
-
-    <!-- Aquí se mostrará la imagen de la figura seleccionada -->
-    <div id="imagenFigura">
-        <img id="figuraImg" src="" alt="" style="display: none; max-width: 200px; margin: 20px auto; display: block;">
-    </div>
-
-    <div id="frmRectangulo" class="formulario">
-        <h2>Rectángulo</h2>
-        <label id="lblBase">Base:</label>
-        <input type="number" id="txtBase" step="0.01">
-        <label id="lblAltura">Altura:</label>
-        <input type="number" id="txtAltura" step="0.01">
-        <button id="btnCalcularRectangulo">Calcular</button>
-        <p id="resultadoRectangulo"></p>
-    </div>
-
-    <div id="frmCuadrado" class="formulario">
-        <h2>Cuadrado</h2>
-        <label id="lblLado">Lado:</label>
-        <input type="number" id="txtLado" step="0.01">
-        <button id="btnCalcularCuadrado">Calcular</button>
-        <p id="resultadoCuadrado"></p>
-    </div>
-
-    <div id="frmCirculo" class="formulario">
-        <h2>Círculo</h2>
-        <label id="lblRadio">Radio:</label>
-        <input type="number" id="txtRadio" step="0.01">
-        <button id="btnCalcularCirculo">Calcular</button>
-        <p id="resultadoCirculo"></p>
-    </div>
-
-    <div id="frmTriangulo" class="formulario">
-        <h2>Triángulo</h2>
-        <label id="lblBaseTriangulo">Base:</label>
-        <input type="number" id="txtBaseTriangulo" step="0.01">
-        <label id="lblAlturaTriangulo">Altura:</label>
-        <input type="number" id="txtAlturaTriangulo" step="0.01">
-        <button id="btnCalcularTriangulo">Calcular</button>
-        <p id="resultadoTriangulo"></p>
-    </div>
-
-    <script src="app.js"></script>
 </body>
 </html>
